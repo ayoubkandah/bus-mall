@@ -1,0 +1,75 @@
+
+body{
+    color: rgb(104, 64, 11);
+background-image: url(https://ak.picdn.net/shutterstock/videos/19584043/thumb/1.jpg); background-size: cover;
+    font-weight: bold;
+    font-size: 120%;
+}
+
+div{
+    display: inline-block;
+    width: 1100px; height: 400px;
+    margin-left :90px;
+    margin-top: 30px;
+    border: 3px groove rgb(152, 167, 94) ;
+    margin-bottom: 20px;
+    background-color: rgba(31, 37, 37,0.2);
+}
+img{
+    margin-top: 90px;
+    width: 30%; height: 50%;
+    margin-left: 20px;
+    border: 3px groove rgb(121, 112, 112);
+    -ms-transform: rotate(-8deg);
+    transform: rotate(-8deg);
+    /* box-shadow: 15px 20px 25px rgb(224, 248, 10); */
+    box-shadow: 10px 10px 10px #e5ff00;
+    
+    
+}
+
+button{
+    font-size: 150%;
+    margin-left: 50%;
+    margin-top: 20px;
+    background-color: rgb(168, 139, 6);
+    box-shadow: 2px 4px 10px rgb(224, 248, 10);
+  
+}
+button:hover{
+    background-color: chartreuse !important;
+}
+
+legend{
+    text-align: center; font-size: 120%;
+}
+
+#field1{
+    background-color: rgba(31, 37, 37,0.2);
+    margin-bottom: 20px;
+}
+ul {
+    margin-top: 25px;
+ border:2px groove rgba(31, 37, 37,0.2) ;
+ ; padding: 40px; margin-left: 50px;
+ background-color: rgba(129, 124, 51,0.2);
+}
+li {
+    list-style: decimal;
+    border-bottom: 1px solid black;
+}
+#submitF{
+
+  padding:5px;
+    margin-top: 20px;
+    background-color: rgb(204, 172, 29);
+    box-shadow: 2px 4px 10px rgb(224, 248, 10);
+}
+#submitF:hover{
+    background-color: chartreuse !important;
+}
+img:hover{
+    opacity:0.7;
+
+  background: yellow !important;
+}
