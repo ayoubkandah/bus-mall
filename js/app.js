@@ -71,29 +71,42 @@ function getrandomnumber(){
 
 function randomimage(){
 
+    
   do
   {  image1index=getrandomnumber();
     image2index=getrandomnumber();
-    image3index=getrandomnumber();}
-    while(image1index==image2index||image3index==image1index||image2index==image3index ||iamgeprev1==image1index || iamgeprev2==image1index || iamgeprev3==image1index || iamgeprev3==image2index || iamgeprev2==image2index || iamgeprev3==image3index ||iamgeprev1==image1index || iamgeprev2==image1index || iamgeprev3==image1index || iamgeprev3==image2index || iamgeprev2==image2index || iamgeprev3==image3index)
+    image3index=getrandomnumber();
+    while(image1index==iamgeprev1 || image1index==iamgeprev2 || image1index==iamgeprev3 ||image2index== iamgeprev3||image2index== iamgeprev2 || image3index==iamgeprev3)
+    {
+        image1index=getrandomnumber();
+        image2index=getrandomnumber();
+        image3index=getrandomnumber();  
+    }
+}
+    while(image1index==image2index||image3index==image1index||image2index==image3index  )
 // console.log(allimages.prototype.inserti[image2index].source)
-iamgeprev1=image1index;
-iamgeprev2=image2index;
-iamgeprev3=image3index;
+if( image1index==iamgeprev1 || image1index==iamgeprev2 || image1index==iamgeprev3 ||image2index== iamgeprev3||image2index== iamgeprev2 || image3index==iamgeprev3)
+{
+    console.log("s")
+  
+
+}
 image1.src=allimages.prototype.inserti[image1index].source
 allimages.prototype.inserti[image1index].timesshown++;
 
-console.log(allimages.prototype.inserti[image1index].timesshown);
 
 image2.src=allimages.prototype.inserti[image2index].source
 allimages.prototype.inserti[image2index].timesshown++;
 image3.src=allimages.prototype.inserti[image3index].source
 allimages.prototype.inserti[image3index].timesshown++;
-
-
+console.log(image3index,image2index,image1index);
+iamgeprev1=image1index;
+iamgeprev2=image2index;
+iamgeprev3=image3index;
+console.log();
 }
 
-randomimage()
+randomimage(image1index,image2index,image3index)
 
 // image1.addEventListener("click",render)
 // image2.addEventListener("click",render)
