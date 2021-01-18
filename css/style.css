@@ -1,9 +1,11 @@
 
 body{
-    color: rgb(104, 64, 11);
-background-image: url(https://ak.picdn.net/shutterstock/videos/19584043/thumb/1.jpg); background-size: cover;
+    color: rgb(255, 245, 205);
+background-image: url(https://www.oneshop.com.my/image/catalog/BlockBanner/MainBlockBanner_584x494px.jpg); background-size: cover;
     font-weight: bold;
-    font-size: 120%;
+    background-attachment: fixed;
+    font-size: 150%;
+    text-shadow: 3px 2px 2px rgb(129, 78, 0);
 }
 
 div{
@@ -23,6 +25,7 @@ img{
     border: 3px groove rgb(121, 112, 112);
     -ms-transform: rotate(-8deg);
     transform: rotate(-8deg);
+    box-shadow: 10px 10px 10px #585652;
     /* box-shadow: 15px 20px 25px rgb(224, 248, 10); */
  
     
@@ -34,11 +37,12 @@ button{
     margin-left: 50%;
     margin-top: 20px;
     background-color: rgb(168, 139, 6);
-    box-shadow: 2px 4px 10px rgb(224, 248, 10);
+   
   
 }
 button:hover{
     background-color: chartreuse !important;
+    box-shadow: 2px 4px 10px rgb(224, 248, 10);
 }
 
 legend{
@@ -47,7 +51,8 @@ legend{
 
 #field1{
     background-color: rgba(31, 37, 37,0.2);
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+   
 }
 ul {
     margin-top: 25px;
@@ -65,15 +70,23 @@ li {
   height: 30px;
     margin-top: 20px;
     background-color: rgb(204, 172, 29);
-    box-shadow: 2px 4px 10px rgb(224, 248, 10);
+   
 }
 #submitF:hover{
     background-color: chartreuse !important;
+    box-shadow: 2px 4px 10px rgb(224, 248, 10);
 }
 img:hover{
     opacity:1;
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    box-shadow: 10px 10px 10px #ff0800;
+    box-shadow: 10px 10px 10px #ffee00;
   background: yellow !important;
+ color: rgba(96, 204, 33, 0.733);
+}
+
+#Canvas{
+    background-color: rgba(253, 173, 0, 0.8);
+ font-weight: bold;
+ border: 3px groove rgb(248, 189, 80);
 }
