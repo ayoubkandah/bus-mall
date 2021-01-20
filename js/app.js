@@ -15,9 +15,7 @@ var Div=document.getElementById("Section")
 var triggersell=false;
 var num = document.getElementById("maxnum")
 var sub = document.getElementById("formID");
-var iamgeprev1=99;
-var iamgeprev2=99;
-var iamgeprev3=99;
+
 var prevTrigger=false;
  sub.addEventListener("submit", submitRun);
 
@@ -69,17 +67,21 @@ function getrandomnumber(){
     return   randomnum;
 }
 
-function randomimage(){
+var previmages=[];
 
+function randomimage(){
+console.log(previmages);
   do
   {  image1index=getrandomnumber();
     image2index=getrandomnumber();
     image3index=getrandomnumber();}
-    while(image1index==image2index||image3index==image1index||image2index==image3index ||iamgeprev1==image1index || iamgeprev2==image1index || iamgeprev3==image1index || iamgeprev3==image2index || iamgeprev2==image2index || iamgeprev3==image3index ||iamgeprev1==image1index || iamgeprev2==image1index || iamgeprev3==image1index || iamgeprev3==image2index || iamgeprev2==image2index || iamgeprev3==image3index)
+    while(image1index==image2index||image3index==image1index||image2index==image3index || previmages.includes(image1index)||previmages.includes(image2index)||previmages.includes(image3index))
 // console.log(allimages.prototype.inserti[image2index].source)
-iamgeprev1=image1index;
-iamgeprev2=image2index;
-iamgeprev3=image3index;
+previmages=[]
+previmages.push(image1index);
+previmages.push(image2index);
+previmages.push(image3index);
+
 image1.src=allimages.prototype.inserti[image1index].source
 allimages.prototype.inserti[image1index].timesshown++;
 console.log(image1index,image2index,image3index)
