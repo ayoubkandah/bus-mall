@@ -15,7 +15,7 @@ var Div=document.getElementById("Section")
 var triggersell=false;
 var num = document.getElementById("maxnum")
 var sub = document.getElementById("formID");
-
+// to get value from user
 var prevTrigger=false;
  sub.addEventListener("submit", submitRun);
 
@@ -59,7 +59,7 @@ new allimages("usb","img/usb.gif");
 new allimages("water-can","img/water-can.jpg");
 new allimages("wine-glass","img/wine-glass.jpg");
 
-
+// generate numbers
 function getrandomnumber(){
     
     var randomnum=Math.floor(Math.random()*20);
@@ -68,7 +68,7 @@ function getrandomnumber(){
 }
 
 var previmages=[];
-
+// condition to choose images
 function randomimage(){
 console.log(previmages);
   do
@@ -153,7 +153,7 @@ randomimage();
     console.log(prevShown);
 
  }
-
+// to display the results from votest and times shown
 function Result(){
   
 
@@ -183,8 +183,8 @@ percent=0;
         percent=Math.floor(percent*100);
 
         }
-        voteG.push(allimages.prototype.inserti[x].vote)
-        numSh.push(allimages.prototype.inserti[x].timesshown)
+        voteG.push(prevVotes[x]+allimages.prototype.inserti[x].vote)
+        numSh.push(prevShown[x]+allimages.prototype.inserti[x].timesshown) 
         
         prevVotes[x]=(prevVotes[x]+allimages.prototype.inserti[x].vote)
         prevShown[x]=(prevShown[x]+allimages.prototype.inserti[x].timesshown)   
@@ -201,6 +201,7 @@ console.log(prevShown);
     localStorage.setItem("Shown",JSON.stringify(prevShown))
     //localStorage.setItem("Names",JSON.stringify(prevNames))
 
+    // chart code
     chartRes()
     startsel=+maxsel+1;
     storedclick =0;
